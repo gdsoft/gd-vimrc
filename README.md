@@ -42,3 +42,42 @@ $ vim
 要升级vim-plug本身，请输入：
 :PlugUpgrade
 ```
+
+## Coc 插件
+```
+方便的配置和管理，跟 VSCode 插件一样，coc 插件可以在 package.json 中配置启动事件、自定义设置项、
+json scheme关联等额外信息，coc-json 可以加载插件的自定义设置项从而对用户的配置文件进行补全和验证。
+
+安装coc插件仅需要CocInstall命令，管理coc插件可以通过:CocList extensions来操作。
+
+快速重新加载，无需重启vim，使用命令:CocRestart可以重启coc服务，所有插件都会被重新加载，
+或者使用 g:coc_watch_extensions 配置同时安装 watchman 在插件代码变化后自动重新加载。
+
+调试代码，最简单的方式是在插件中使用console.log, 输出内容会重定向到coc.nvim 的日志，
+复杂一点的问题可以使用Chrome来调试，只需设置
+let g:coc_node_args = ['--nolazy', '--inspect-brk=6045']，
+然后Chrome打开chrome://inspect页面找到对应target。
+
+https://github.com/neoclide 官方插件地址
+```
+
+## PHP
+```
+npm i -g intelephense
+
+// In vim
+:CocUninstall coc-phpls
+:CocConfig
+{
+    "languageserver": {
+        "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
+        }
+    }
+}
+```

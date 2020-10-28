@@ -54,33 +54,36 @@ set matchpairs+=<:>                                               " specially fo
 " Default Indentation
 set autoindent
 set smartindent     " indent when
-set tabstop=4       " tab width
-set softtabstop=4   " backspace
-set shiftwidth=4    " indent width
+set tabstop=2       " tab width
+set softtabstop=2   " backspace
+set shiftwidth=2    " indent width
 " set textwidth=79
 " set smarttab
 set expandtab       " expand tab to space
 
-autocmd FileType php setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
+"autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
-autocmd FileType php setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
 autocmd FileType coffee,javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 autocmd FileType python setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=120
-"autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=0
 autocmd FileType html,htmldjango,xhtml,haml setlocal tabstop=4 shiftwidth=4 softtabstop=4 textwidth=0
 autocmd FileType sass,scss,css setlocal tabstop=2 shiftwidth=2 softtabstop=2 textwidth=120
 
+"-----------------
 " syntax support
+"-----------------
 autocmd Syntax javascript set syntax=jquery   " JQuery syntax support
+
+"-----------------
 " js
+"-----------------
 let g:html_indent_inctags = "html,body,head,tbody"
 let g:html_indent_script1 = "inc"
 let g:html_indent_style1 = "inc"
 
 "-----------------
 " Plugin settings
-"-----------------
 " Rainbow parentheses for Lisp and variants
+"-----------------
 let g:rbpt_colorpairs = [
     \ ['brown',       'RoyalBlue3'],
     \ ['Darkblue',    'SeaGreen3'],
@@ -102,7 +105,9 @@ let g:rbpt_colorpairs = [
 let g:rbpt_max = 16
 autocmd Syntax lisp,scheme,clojure,racket RainbowParenthesesToggle
 
+"-----------------
 " tabbar
+"-----------------
 let g:Tb_MaxSize = 2
 let g:Tb_TabWrap = 1
 
@@ -111,16 +116,23 @@ hi Tb_Changed guifg=green ctermfg=green
 hi Tb_VisibleNormal ctermbg=252 ctermfg=235
 hi Tb_VisibleChanged guifg=green ctermbg=252 ctermfg=white
 
+"-----------------
 " easy-motion
+"-----------------
 let g:EasyMotion_leader_key = '<Leader>'
 
+"-----------------
 " Tagbar
+"-----------------
 let g:tagbar_left=1
 let g:tagbar_width=30
 let g:tagbar_autofocus = 1
 let g:tagbar_sort = 0
 let g:tagbar_compact = 1
+
+"-----------------
 " tag for coffee
+"-----------------
 if executable('coffeetags')
   let g:tagbar_type_coffee = {
         \ 'ctagsbin' : 'coffeetags',
@@ -145,7 +157,9 @@ if executable('coffeetags')
     \ }
 endif
 
+"-----------------
 " Nerd Tree
+"-----------------
 let NERDChristmasTree=0
 let NERDTreeWinSize=30
 let NERDTreeChDirMode=2
@@ -155,18 +169,24 @@ let NERDTreeShowBookmarks=1
 let NERDTreeShowHidden=1
 let NERDTreeWinPos = "right"
 
+"-----------------
 " nerdcommenter
+"-----------------
 let NERDSpaceDelims=1
 " nmap <D-/> :NERDComToggleComment<cr>
 let NERDCompactSexyComs=1
 
+"-----------------
 " ZenCoding
+"-----------------
 let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 
+"-----------------
 " NeoComplCache
+"-----------------
 let g:neocomplcache_enable_at_startup=1
 let g:neoComplcache_disableautocomplete=1
 "let g:neocomplcache_enable_underbar_completion = 1
@@ -174,6 +194,7 @@ let g:neoComplcache_disableautocomplete=1
 let g:neocomplcache_enable_smart_case=1
 let g:neocomplcache_min_syntax_length = 3
 let g:neocomplcache_lock_buffer_name_pattern = '\*ku\*'
+
 set completeopt-=preview
 
 imap <C-k> <Plug>(neocomplcache_snippets_force_expand)
@@ -192,31 +213,37 @@ if !exists('g:neocomplcache_omni_patterns')
 endif
 let g:neocomplcache_omni_patterns.erlang = '[a-zA-Z]\|:'
 
+"-----------------
 " SuperTab
+"-----------------
 " let g:SuperTabDefultCompletionType='context'
 let g:SuperTabDefaultCompletionType = '<C-X><C-U>'
 let g:SuperTabRetainCompletionType=2
 
+"-----------------
 " ctrlp
+"-----------------
 set wildignore+=*/tmp/*,*.so,*.o,*.a,*.obj,*.swp,*.zip,*.pyc,*.pyo,*.class,.DS_Store  " MacOSX/Linux
 let g:ctrlp_custom_ignore = '\.git$\|\.hg$\|\.svn$'
 
+"-----------------
 " Use deoplete.
+"-----------------
 let g:deoplete#enable_at_startup = 1
 
+"-----------------
+" Use Quickrun.
+"-----------------
 let g:quickrun_config = {}
-" quickrum for groovy
 let g:quickrun_config.groovy = {'command' : 'groovy', 'cmdopt' : ''}
-" quickrum for node
 let g:quickrun_config.node = {'command' : 'node', 'cmdopt' : ''}
-" quickrum for biwascheme
 let g:quickrun_config.biwas = {'command' : 'biwas', 'cmdopt' : ''}
-" quickrum for chez
 let g:quickrun_config.chez = {'command' : 'scheme', 'cmdopt' : '--script'}
-" quickrum for scheme
 let g:quickrun_config.scheme = {'command' : 'scheme', 'cmdopt' : '--script'}
 
+"-----------------
 " Terminal
+"-----------------
 if has('nvim')
     fu! OpenTerminal()
         :terminal
@@ -245,7 +272,9 @@ fu! VSplit()
     setlocal nobuflisted
 endf
 
+"------------------
 " Keybindings for plugin toggle
+"------------------
 nnoremap <F2> :set invpaste paste?<CR>
 set pastetoggle=<F2>
 nmap <F3> :GundoToggle<cr>
@@ -267,7 +296,9 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
+"------------------
 " When editing a file, always jump to the last cursor position
+"------------------
 autocmd BufReadPost *
       \ if ! exists("g:leave_my_cursor_position_alone") |
       \     if line("'\"") > 0 && line ("'\"") <= line("$") |
@@ -278,17 +309,23 @@ autocmd BufReadPost *
 " w!! to sudo & write a file
 cmap w!! %!sudo tee >/dev/null %
 
+"------------------
 " Quickly edit/reload the vimrc file
+"------------------
 nmap <silent> <leader>ev :e $MYVIMRC<CR>
 nmap <silent> <leader>sv :so $MYVIMRC<CR>
 
+"------------------
 " sublime key bindings
+"------------------
 nmap <D-]> >>
 nmap <D-[> <<
 vmap <D-[> <gv
 vmap <D-]> >gv
 
+"------------------
 " eggcache vim
+"------------------
 nnoremap ; :
 :command W w
 :command WQ wq
@@ -297,7 +334,9 @@ nnoremap ; :
 :command Qa qa
 :command QA qa
 
+"------------------
 " for macvim
+"------------------
 if has("gui_running")
     set go=aAce  " remove toolbar
     "set transparency=30
@@ -318,3 +357,24 @@ if has("gui_running")
     map <D-9> 9gt
     map <D-0> :tablast<CR>
 endif
+
+"------------------
+" Coc.nvim
+"------------------
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+" Use <leader>x for convert visual selected code to snippet
+xmap <leader>x  <Plug>(coc-convert-snippet)
+
+autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
+
+" ctrl-space tigger
+inoremap <silent><expr> <c-space> coc#refresh()

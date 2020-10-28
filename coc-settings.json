@@ -1,0 +1,15 @@
+{
+    "tsserver.npm":"/usr/bin/npm",
+    "tsserver.log": "verbose",
+    "tsserver.trace.server": "verbose",
+    "languageserver": {
+        "intelephense": {
+            "command": "intelephense",
+            "args": ["--stdio"],
+            "filetypes": ["php"],
+            "initializationOptions": {
+                "storagePath": "/tmp/intelephense"
+            }
+        }
+    }
+}
