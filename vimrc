@@ -179,7 +179,7 @@ let NERDCompactSexyComs=1
 "-----------------
 " ZenCoding
 "-----------------
-let g:user_emmet_expandabbr_key='<C-j>'
+"let g:user_emmet_expandabbr_key='<C-j>'
 
 " powerline
 let g:Powerline_symbols = 'fancy'

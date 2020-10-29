@@ -9,7 +9,7 @@ Plug 'tpope/vim-fugitive'
 " Code Completions
 "------------------
 Plug 'neoclide/coc.nvim', { 'branch': 'release' }
-Plug 'mattn/emmet-vim'
+"Plug 'mattn/emmet-vim'
 "Plug 'Shougo/neocomplcache'
 "Plug 'Shougo/neosnippet'
 "Plug 'Shougo/neosnippet-snippets'
