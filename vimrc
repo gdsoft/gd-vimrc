@@ -32,6 +32,7 @@ set ignorecase
 set smartcase
 
 " editor settings
+set rtp+=/usr/lib/python3.8/site-packages/powerline/bindings/vim
 set history=1000
 set nocompatible
 set nofoldenable                                                  " disable folding"
@@ -181,8 +182,11 @@ let NERDCompactSexyComs=1
 "-----------------
 "let g:user_emmet_expandabbr_key='<C-j>'
 
+"-----------------
 " powerline
+"-----------------
 let g:Powerline_symbols = 'fancy'
+let g:powerline_pycmd="py3"
 
 "-----------------
 " NeoComplCache
