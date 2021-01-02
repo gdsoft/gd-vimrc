@@ -49,7 +49,7 @@ Plug 'kien/ctrlp.vim'
 "Plug 'Lokaltog/vim-powerline'
 Plug 'scrooloose/syntastic'
 Plug 'bronson/vim-trailing-whitespace'
-Plug 'itchyny/lightline.vim'
+"Plug 'itchyny/lightline.vim'
 
 "-------------
 " Other Utils
