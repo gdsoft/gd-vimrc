@@ -32,7 +32,7 @@ set ignorecase
 set smartcase
 
 " editor settings
-set rtp+=/usr/lib/python3.8/site-packages/powerline/bindings/vim
+set rtp+=/usr/lib/python3.9/site-packages/powerline/bindings/vim
 set history=1000
 set nocompatible
 set nofoldenable                                                  " disable folding"
