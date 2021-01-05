@@ -95,7 +95,7 @@ Plug 'thinca/vim-quickrun'
 
 "------- Rust --------
 "Plug 'racer-rust/vim-racer'
-"Plug 'rust-lang/rust.vim'
+Plug 'rust-lang/rust.vim'
 
 "------- Go ----------
 "Plug 'fatih/vim-go'
