@@ -13,17 +13,22 @@ syntax on
 " Vim UI
 "--------
 " color scheme
-"set background=dark
 "color solarized
 colorscheme molokai
-set background=dark
-hi comment ctermfg=3
+"set background=dark
+set background=light
+"hi comment ctermfg=3
 "hi MatchParen ctermbg=Yellow guibg=lightblue
 
-" highlight current line
-au WinLeave * set nocursorline nocursorcolumn
-au WinEnter * set cursorline cursorcolumn
-set cursorline cursorcolumn
+" highlight current line and column
+"au WinLeave * set nocursorline nocursorcolumn
+"au WinEnter * set cursorline cursorcolumn
+"set cursorline cursorcolumn
+
+" highlight current line only
+au WinLeave * set nocursorline
+au WinEnter * set cursorline
+set cursorline
 
 " search
 set incsearch
