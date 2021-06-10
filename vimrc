@@ -367,6 +367,8 @@ if has("gui_running")
     map <D-0> :tablast<CR>
 endif
 
+let g:snipMate = { 'snippet_version' : 1 }
+
 "------------------
 " Coc.nvim
 "------------------
