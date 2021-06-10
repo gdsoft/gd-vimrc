@@ -15,6 +15,7 @@ Plug 'neoclide/coc.nvim', { 'branch': 'release' }
 "Plug 'Shougo/neosnippet-snippets'
 Plug 'Raimondi/delimitMate'
 Plug 'ervandew/supertab'
+Plug 'sheerun/vim-polyglot'
 "------ snipmate -------
 Plug 'garbas/vim-snipmate'
 Plug 'honza/vim-snippets'
