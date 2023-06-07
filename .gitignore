@@ -106,3 +106,8 @@ dist
 # Vim
 plugged
 sessions
+
+# Temp file
+*.orig
+*.old*
+*.swp

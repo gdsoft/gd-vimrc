@@ -106,6 +106,7 @@ Plug 'kien/rainbow_parentheses.vim'
 "Plug 'wlangstroth/vim-racket'
 "Plug 'vim-scripts/VimClojure'
 Plug 'rosstimson/scala-vim-support'
+Plug 'OmniSharp/omnisharp-vim'
 
 "--------------
 " Color Schemes

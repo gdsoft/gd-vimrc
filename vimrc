@@ -9,15 +9,17 @@ filetype plugin indent on
 " enable syntax hightlight and completion
 syntax on
 
+set number
+
 "--------
 " Vim UI
 "--------
 " color scheme
 "color solarized
-colorscheme molokai
+"colorscheme molokai
+colorscheme evening
 "set background=dark
-set background=light
-"hi comment ctermfg=3
+"set background=light
 "hi MatchParen ctermbg=Yellow guibg=lightblue
 
 " highlight current line and column
@@ -60,9 +62,9 @@ set matchpairs+=<:>                                               " specially fo
 " Default Indentation
 set autoindent
 set smartindent     " indent when
-set tabstop=2       " tab width
-set softtabstop=2   " backspace
-set shiftwidth=2    " indent width
+set tabstop=4       " tab width
+set softtabstop=4   " backspace
+set shiftwidth=4    " indent width
 " set textwidth=79
 " set smarttab
 set expandtab       " expand tab to space
@@ -389,3 +391,5 @@ autocmd User CocJumpPlaceholder call CocActionAsync('showSignatureHelp')
 
 " ctrl-space tigger
 inoremap <silent><expr> <c-space> coc#refresh()
+
+highlight Comment ctermfg=cyan
